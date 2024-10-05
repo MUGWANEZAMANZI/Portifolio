@@ -1,0 +1,52 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #7f6d6d;
+}
+header{ background-color: brown;height: 5%;padding: 5px 0px 5px; }
+header a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+header a:hover{
+    background-color: black;
+   
+}
+#body{
+    flex: 1;
+}
+#image{
+    left: 75%;
+    top: 10%;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    overflow: hidden;
+}
+#image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+    image-rendering: high-quality;
+} 
+.content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.content.active {
+    display: block;
+}
+#footer{
+    position: fixed;
+    
+}
+header a{
+    float: right;
+}
