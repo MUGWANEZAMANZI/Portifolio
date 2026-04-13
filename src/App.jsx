@@ -7,21 +7,24 @@ import Games from './pages/Games';
 import Contact from './pages/Contact';
 import Cyber from './pages/Cyber';
 import Web from './pages/Web';
+import { LanguageProvider } from './context/LanguageContext';
 function App() {
 
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/certifications" element={<Cyber />} />
-          <Route path="/cyber" element={<Navigate to="/certifications" replace />} />
-          <Route path='/web' element={<Web />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/certifications" element={<Cyber />} />
+            <Route path="/cyber" element={<Navigate to="/certifications" replace />} />
+            <Route path='/web' element={<Web />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </LanguageProvider>
   )
 }
 

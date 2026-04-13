@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+	--bg-0: #020617;
+	--bg-1: #0b1022;
+	--bg-2: #111827;
+	--brand-cyan: #22d3ee;
+	--brand-blue: #38bdf8;
+	--brand-indigo: #818cf8;
+	--text-main: #f8fafc;
+	--text-soft: #cbd5e1;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	color: var(--text-main);
+	font-family: "Space Grotesk", "Sora", sans-serif;
+	background:
+		radial-gradient(1200px 500px at 10% -10%, rgba(34, 211, 238, 0.16), transparent 60%),
+		radial-gradient(900px 500px at 95% 0%, rgba(129, 140, 248, 0.2), transparent 60%),
+		linear-gradient(145deg, var(--bg-0), var(--bg-1) 45%, var(--bg-2));
+	background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Sora", "Space Grotesk", sans-serif;
+	letter-spacing: -0.02em;
+}
+
+a {
+	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(15, 23, 42, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, rgba(34, 211, 238, 0.7), rgba(56, 189, 248, 0.5));
+	border-radius: 999px;
+}
+
+.glass-panel {
+	background: linear-gradient(140deg, rgba(15, 23, 42, 0.74), rgba(15, 23, 42, 0.5));
+	border: 1px solid rgba(148, 163, 184, 0.25);
+	backdrop-filter: blur(10px);
+}

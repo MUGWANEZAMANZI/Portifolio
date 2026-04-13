@@ -1,51 +1,70 @@
+import { useLanguage } from "../context/LanguageContext";
+import ExperienceMap from "../components/ExperienceMap";
+
 function Cyber() {
+  const { language, t } = useLanguage();
+
   const certifications = [
     {
       title: "Quantum Business Foundations",
       entity: "IBM Quantum",
-      description: "Introduction to quantum computing concepts and value landscape for business and research applications.",
+      descriptionEn: "Introduction to quantum computing concepts and value landscape for business and research applications.",
+      descriptionFr: "Introduction aux concepts de l'informatique quantique et a la creation de valeur pour les applications business et recherche.",
+      descriptionRw: "Intangiriro ku bitekerezo bya quantum computing n akamaro kayo mu bucuruzi no mu bushakashatsi.",
       time: "2025",
       image: "Quantum_Business_foundations.jpg"
     },
     {
       title: "Basics of Quantum Information",
       entity: "IBM Quantum",
-      description: "Core principles of quantum information, qubits, and fundamental operations relevant to quantum algorithms.",
+      descriptionEn: "Core principles of quantum information, qubits, and fundamental operations relevant to quantum algorithms.",
+      descriptionFr: "Principes fondamentaux de l'information quantique, des qubits et des operations de base pour les algorithmes quantiques.",
+      descriptionRw: "Amahame y ibanze y amakuru ya quantum, qubits n ibikorwa by ibanze bijyanye na algorithms za quantum.",
       time: "2025",
       image: "basics_of_quantum_information.jpg"
     },
     {
       title: "Digital Forensics",
       entity: "ThinkCyber",
-      description: "Windows-focused digital forensics including acquisition & triage, registry and event log analysis, common artifacts, Volatility usage, and evidence handling (chain of custody).",
+      descriptionEn: "Windows-focused digital forensics including acquisition & triage, registry and event log analysis, common artifacts, Volatility usage, and evidence handling (chain of custody).",
+      descriptionFr: "Forensique numerique orientee Windows incluant acquisition, triage, analyse du registre et des journaux, artefacts courants, Volatility et gestion des preuves.",
+      descriptionRw: "Digital forensics yibanze kuri Windows harimo acquisition, triage, isesengura rya registry na logs, gukoresha Volatility no gucunga ibimenyetso.",
       time: "6 March 2025",
       image: "windows.jpg"
     },
     {
       title: "SOC Analyst",
       entity: "ThinkCyber",
-      description: "Students mastered the intricacies of Windows domain operations, specifically using Sysmon for comprehensive event logging. They explored firewall configuration and intrusion detection systems in a SOC environment, gaining hands-on experience with tools like pfSense and Snort. They learned to navigate the key components of Security Information and Event Management (SIEM) through ELK stack and Splunk, enhancing their event monitoring capabilities. The journey concluded with advanced cybersecurity topics, including threat hunting via MITRE ATT&CK, log analysis, and incident response, equipping them with vital skills for threat detection and mitigation.",
+      descriptionEn: "Students mastered Windows domain operations, used Sysmon for event logging, configured firewalls and IDS, and worked with ELK and Splunk for SIEM. They also covered threat hunting with MITRE ATT&CK, log analysis, and incident response.",
+      descriptionFr: "Maitrise des operations de domaine Windows, utilisation de Sysmon pour la journalisation, configuration de pare-feu et IDS, et usage de ELK et Splunk pour le SIEM. Le parcours a inclus threat hunting avec MITRE ATT&CK, analyse de logs et reponse a incident.",
+      descriptionRw: "Abanyeshuri bize ibikorwa bya Windows domain, gukoresha Sysmon, firewall na IDS, ELK na Splunk muri SIEM, threat hunting hamwe na MITRE ATT&CK no gusubiza ibibazo by umutekano.",
       time: "2025",
       image: "soc.jpg"
     },
     {
       title: "Network research",
       entity: "ThinkCyber",
-      description: "This project entails setting up a system that initiates with the installation of required applications, ensuring avoidance of repeated installations. It performs an anonymity check of the network connection, alerting if non-anonymous, and revealing the spoofed country name if anonymous. It also accepts user-specified scan targets. Furthermore, the system can establish a remote SSH connection to retrieve server details and execute commands such as Whois and open port scans. Finally, it saves the gathered data into local files and maintains a log for auditing data collection activities.",
+      descriptionEn: "Set up a system to install required applications, check network anonymity, accept scan targets, connect remotely via SSH, run Whois and port scans, and save logs locally for auditing.",
+      descriptionFr: "Mise en place d'un systeme pour installer les applications requises, verifier l'anonymat reseau, accepter des cibles de scan, se connecter en SSH, executer Whois et scans de ports, puis conserver les journaux localement.",
+      descriptionRw: "Kubaka sisiteme ishyiraho apps zikenewe, igenzura anonymity y urusobe, yakira scan targets, ikoresha SSH, ikora Whois na port scans kandi ikabika logs.",
       time: "2024",
       image: "network.jpg"
     },
     {
       title: "Python Fundamentals",
       entity: "ThinkCyber",
-      description: "This project involves developing a Python tool specifically designed to analyze log files, with a focus on /var/log/auth.log. The tools primary function is to extract, examine, and interpret log data to uncover valuable insights about system operations, security events, and potential anomalies. It identifies key information such as command usage, user authentication changes, and security alerts, providing a detailed analysis that enhances the understanding of system behavior and security posture. The project also requires proper documentation, including comments in the code, and submission of both the source code and proof of functionality in the prescribed format.",
+      descriptionEn: "Developed a Python tool to analyze auth logs, extract key security events, identify anomalies, and document findings with proper code comments and proof of functionality.",
+      descriptionFr: "Developpement d'un outil Python pour analyser les logs d'authentification, extraire les evenements de securite, identifier les anomalies et documenter les resultats.",
+      descriptionRw: "Nakoze igikoresho cya Python gisesengura auth logs, kigakuramo ibyingenzi by umutekano, kikamenya anomalies kandi kikandika ibisubizo.",
       time: "2024",
       image: "python.jpg"
     },
     {
       title: "Linux Fundamentals",
       entity: "ThinkCyber",
-      description: "This project entails the creation of a Bash script to capture and present various system metrics for a Linux operating system. The script provides insights into the Linux version in use, network details including private and public IP addresses as well as the default gateway. It extends to compute disk statistics, showcasing overall size, free, and used space. The script also highlights the five largest directories and monitors CPU usage, updating these statistics every ten seconds to reflect real-time system state.",
+      descriptionEn: "Created a Bash script to display Linux version, network information, disk usage, largest directories, and CPU monitoring with periodic updates.",
+      descriptionFr: "Creation d'un script Bash pour afficher la version Linux, les informations reseau, l'utilisation disque, les plus grands repertoires et le suivi CPU avec mise a jour periodique.",
+      descriptionRw: "Nakoze script ya Bash yerekana Linux version, network info, disk usage, directories nini na CPU monitoring buri gihe.",
       time: "2024",
       image: "linux.jpg"
     },
@@ -54,7 +73,10 @@ function Cyber() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-800 to-gray-950 p-8">
-      <h1 className="text-4xl font-bold text-center mb-12 text-cyan-400">🎓 Certifications</h1>
+      <div className="max-w-7xl mx-auto mb-8">
+        <ExperienceMap />
+      </div>
+      <h1 className="text-4xl font-bold text-center mb-12 text-cyan-400">🎓 {t('cyber.title')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {certifications.map((cert, index) => (
           <div
@@ -71,7 +93,7 @@ function Cyber() {
             <div className="p-5 pt-2 md:pt-4">
               <h2 className="text-xl font-semibold text-cyan-300 mb-1">{cert.title}</h2>
               <h3 className="text-sm text-gray-400 mb-3">{cert.entity} • {cert.time}</h3>
-              <p className="text-sm text-gray-300">{cert.description}</p>
+              <p className="text-sm text-gray-300">{language === "fr" ? cert.descriptionFr : language === "rw" ? cert.descriptionRw : cert.descriptionEn}</p>
             </div>
           </div>
         ))}
